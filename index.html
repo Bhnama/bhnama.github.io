@@ -1,54 +1,78 @@
-<!-- POWER BI EXPERIENCE -->
-<section class="glass">
-  <h2>Power BI Experience & Projects</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bhnama | Data Analyst</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  <div class="project-grid">
-    <div class="project-card">
-      <h3>Power BI Fundamentals</h3>
-      <p>
-        Worked on data loading, transformations, and basic visualizations
-        using Power BI Desktop.
-      </p>
-    </div>
+<body class="dark">
 
-    <div class="project-card">
-      <h3>Data Cleaning with Power Query</h3>
-      <p>
-        Performed data cleaning, shaping, and transformations using
-        Power Query Editor.
-      </p>
-    </div>
+  <!-- TOGGLE BUTTON -->
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 
-    <div class="project-card">
-      <h3>DAX & Advanced DAX Functions</h3>
-      <p>
-        Implemented calculated columns, measures, time intelligence,
-        and advanced DAX logic.
-      </p>
-    </div>
+  <!-- HERO -->
+  <header>
+    <h1>Bhnama</h1>
+    <p>Data Analyst | Excel | SQL | Python | Power BI</p>
+  </header>
 
-    <div class="project-card">
-      <h3>Netflix Dataset Visualization</h3>
-      <p>
-        Built interactive Power BI dashboards to analyze content trends,
-        genres, and release patterns.
-      </p>
-    </div>
+  <!-- ABOUT -->
+  <section class="glass">
+    <h2>About Me</h2>
+    <p>
+      I am a Data Analyst skilled in data cleaning, analysis, and visualization.
+      I work with Excel, SQL, Python, and Power BI to transform raw data
+      into meaningful business insights.
+    </p>
+  </section>
 
-    <div class="project-card">
-      <h3>E-Commerce Orders Analysis</h3>
-      <p>
-        Created reports to analyze sales, orders, customers, and revenue
-        using Power BI.
-      </p>
+  <!-- SKILLS -->
+  <section class="glass">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Excel</span>
+      <span>SQL</span>
+      <span>Python</span>
+      <span>Power BI</span>
+      <span>DAX</span>
+      <span>Power Query</span>
     </div>
+  </section>
 
-    <div class="project-card">
-      <h3>Retail Analytics Case Study</h3>
-      <p>
-        Analyzed retail performance metrics, KPIs, and trends
-        through interactive dashboards.
-      </p>
+  <!-- PROJECTS -->
+  <section class="glass">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">Sales Data Analysis</div>
+      <div class="project-card">Netflix Dashboard</div>
+      <div class="project-card">E-Commerce Orders</div>
+      <div class="project-card">Retail Analytics</div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="glass">
+    <h2>Contact</h2>
+    <p>Email: yourname@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/bhnama" target="_blank">github.com/bhnama</a></p>
+  </section>
+
+  <footer>
+    © 2026 Bhnama | Data Analyst Portfolio
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("light");
+      document.body.classList.toggle("dark");
+
+      const btn = document.querySelector(".theme-toggle");
+      btn.textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
+    }
+  </script>
+
+</body>
+</html>
