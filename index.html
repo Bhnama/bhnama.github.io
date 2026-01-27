@@ -5,12 +5,13 @@
   <title>Bhnama | Data Analyst</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Typed -->
+  <!-- Typed.js -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
@@ -25,6 +26,7 @@
   <div class="nav-links">
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#dashboard">Dashboard</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -36,7 +38,7 @@
 
   <div class="hero-buttons">
     <a href="resume.pdf" class="btn primary" download>Download Resume</a>
-    <a href="#projects" class="btn outline">View Projects</a>
+    <a href="#dashboard" class="btn outline">View Dashboard</a>
   </div>
 </section>
 
@@ -44,8 +46,14 @@
 <section class="container" id="skills" data-aos="fade-up">
   <h2>Skills</h2>
   <div class="chip-group">
-    <span>Excel</span><span>SQL</span><span>Python</span><span>Power BI</span>
-    <span>DAX</span><span>Power Query</span><span>Dashboards</span>
+    <span>Excel</span>
+    <span>SQL</span>
+    <span>Python</span>
+    <span>Power BI</span>
+    <span>DAX</span>
+    <span>Power Query</span>
+    <span>Data Cleaning</span>
+    <span>Dashboards</span>
   </div>
 </section>
 
@@ -56,76 +64,87 @@
   <div class="card-grid">
 
     <div class="card">
-      <h3>Netflix Dashboard</h3>
-      <p>Content trends & genre analysis.</p>
-      <button onclick="openModal('Netflix Dashboard','Power BI dashboard analyzing Netflix content trends.')">
-        View Dashboard
-      </button>
+      <h3>Netflix / IMDb Analytics</h3>
+      <p>
+        Analyzed 70 years of movies & shows data using Power BI.
+        Built interactive dashboards using Power Query, DAX, slicers,
+        and advanced visualizations.
+      </p>
+      <a href="#dashboard" class="card-btn">View Dashboard</a>
     </div>
 
     <div class="card">
-      <h3>E-Commerce Orders</h3>
-      <p>Sales & revenue insights.</p>
-      <button onclick="openModal('E-Commerce Orders','Orders, customers & revenue analysis in Power BI.')">
-        View Dashboard
-      </button>
+      <h3>E-Commerce Orders Analysis</h3>
+      <p>
+        Sales, revenue, customer insights using Power BI dashboards
+        with KPIs and filters.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Retail Analytics</h3>
-      <p>KPI & performance dashboards.</p>
-      <button onclick="openModal('Retail Analytics','Retail KPIs, performance metrics & trends.')">
-        View Dashboard
-      </button>
+      <h3>Retail Analytics Case Study</h3>
+      <p>
+        KPI tracking, trend analysis, and performance monitoring dashboards.
+      </p>
     </div>
 
   </div>
+</section>
+
+<!-- DASHBOARD -->
+<section class="container" id="dashboard" data-aos="fade-up">
+  <h2>Netflix Movies & Shows Analytics Dashboard</h2>
+
+  <p class="dashboard-desc">
+    This Power BI dashboard analyzes IMDb ratings, votes, runtime,
+    age certification, and release trends for movies and shows
+    released between 1953–2022.
+  </p>
+
+  <!-- 🔴 REPLACE src WITH YOUR POWER BI EMBED LINK -->
+  <iframe
+    src="PASTE_YOUR_POWERBI_EMBED_LINK_HERE"
+    width="100%"
+    height="600"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
 </section>
 
 <!-- CONTACT -->
 <section class="container contact" id="contact" data-aos="fade-up">
   <h2>Contact</h2>
   <p>Email: yourname@gmail.com</p>
-  <p>GitHub: github.com/bhnama</p>
-  <p>LinkedIn: linkedin.com/in/yourprofile</p>
+  <p>GitHub: <a href="https://github.com/bhnama" target="_blank">github.com/bhnama</a></p>
+  <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourprofile</a></p>
 </section>
 
-<footer>© 2026 Bhnama • Data Analyst</footer>
-
-<!-- MODAL -->
-<div id="modal">
-  <div class="modal-content">
-    <span onclick="closeModal()">×</span>
-    <h3 id="modal-title"></h3>
-    <p id="modal-text"></p>
-  </div>
-</div>
+<footer>
+  © 2026 Bhnama • Data Analyst
+</footer>
 
 <!-- SCRIPTS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-AOS.init({duration:900,once:true});
+  AOS.init({ duration: 1000, once: true });
 
-new Typed("#typed",{
-  strings:["Data Analyst","Power BI Specialist","Excel & SQL Expert"],
-  typeSpeed:60, backSpeed:40, loop:true
-});
+  new Typed("#typed", {
+    strings: [
+      "Data Analyst",
+      "Power BI Specialist",
+      "Excel, SQL & Python",
+      "Turning Data into Insights"
+    ],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
 
-// Progress bar
-window.onscroll=()=>{
-  document.getElementById("progress").style.width =
-  (window.scrollY/(document.body.scrollHeight-window.innerHeight))*100+"%";
-};
-
-// Modal
-function openModal(title,text){
-  document.getElementById("modal").style.display="flex";
-  document.getElementById("modal-title").innerText=title;
-  document.getElementById("modal-text").innerText=text;
-}
-function closeModal(){
-  document.getElementById("modal").style.display="none";
-}
+  // Scroll progress
+  window.onscroll = () => {
+    document.getElementById("progress").style.width =
+      (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100 + "%";
+  };
 </script>
 
 </body>
