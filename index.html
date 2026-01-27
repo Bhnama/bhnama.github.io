@@ -1,117 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Bhnama | Data Analyst Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Bhnama | Data Analyst</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f4f6f8;
-      color: #222;
-    }
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-    header {
-      background: #ffffff;
-      padding: 20px 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    header h1 {
-      margin: 0;
-      text-align: center;
-      font-size: 28px;
-    }
-
-    header p {
-      text-align: center;
-      color: #555;
-      margin-top: 6px;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 10px;
-    }
-
-    h2 {
-      margin-top: 0;
-    }
-
-    p {
-      line-height: 1.6;
-      color: #444;
-    }
-
-    ul {
-      margin-left: 20px;
-      color: #444;
-    }
-
-    img.dashboard {
-      width: 100%;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.18);
-    }
-
-    .note {
-      font-size: 13px;
-      color: #777;
-      margin-top: 8px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #777;
-      font-size: 14px;
-    }
-  </style>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
 
-  <header>
-    <h1>Bhnama</h1>
-    <p>Data Analyst | Power BI | SQL</p>
-  </header>
+<!-- SCROLL PROGRESS -->
+<div id="progress"></div>
 
-  <div class="container">
-    <h2>Netflix Content Analysis – Power BI Dashboard</h2>
-
-    <p>
-      This project demonstrates a Power BI dashboard created using a public Netflix
-      Movies and TV Shows dataset. The dashboard focuses on analyzing content trends,
-      runtime patterns, ratings, and audience engagement across different categories.
-    </p>
-
-    <ul>
-      <li><strong>Tool:</strong> Power BI</li>
-      <li><strong>Skills:</strong> Data Cleaning, DAX, Data Modeling, Dashboard Design</li>
-      <li><strong>Dataset:</strong> Public Netflix Movies & TV Shows Dataset</li>
-    </ul>
-
-    <!-- DASHBOARD IMAGE -->
-    <img 
-      src="netflix-dashboard.png"
-      alt="Netflix Power BI Dashboard"
-      class="dashboard"
-    >
-
-    <p class="note">
-      Note: This is a screenshot of a Power BI report created locally and shared here
-      for portfolio demonstration purposes.
-    </p>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Bhnama</div>
+  <div class="nav-links">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#contact">Contact</a>
   </div>
+</nav>
 
-  <footer>
-    © 2026 Bhnama | Data Analyst Portfolio
-  </footer>
+<!-- HERO -->
+<section class="hero" data-aos="fade-up">
+  <h1>Hi, I’m <span class="accent">Bhnama</span></h1>
+  <h2><span id="typed"></span></h2>
+
+  <div class="hero-buttons">
+    <a href="resume.pdf" class="btn primary" download>Download Resume</a>
+    <a href="#dashboard" class="btn outline">View Dashboard</a>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="container" id="skills" data-aos="fade-up">
+  <h2>Skills</h2>
+  <div class="chip-group">
+    <span>Excel</span>
+    <span>SQL</span>
+    <span>Python</span>
+    <span>Power BI</span>
+    <span>DAX</span>
+    <span>Power Query</span>
+    <span>Data Cleaning</span>
+    <span>Dashboards</span>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="container" id="projects" data-aos="fade-up">
+  <h2>Power BI Projects</h2>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <h3>Netflix / IMDb Analytics</h3>
+      <p>
+        Analyzed 70 years of movies & shows data using Power BI.
+        Built interactive dashboards using Power Query, DAX, slicers,
+        and advanced visualizations.
+      </p>
+      <a href="#dashboard" class="card-btn">View Dashboard</a>
+    </div>
+
+    <div class="card">
+      <h3>E-Commerce Orders Analysis</h3>
+      <p>
+        Sales, revenue, customer insights using Power BI dashboards
+        with KPIs and filters.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Retail Analytics Case Study</h3>
+      <p>
+        KPI tracking, trend analysis, and performance monitoring dashboards.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section class="container" id="dashboard" data-aos="fade-up">
+  <h2>Netflix Movies & Shows Analytics Dashboard</h2>
+
+  <p class="dashboard-desc">
+    This Power BI dashboard analyzes IMDb ratings, votes, runtime,
+    age certification, and release trends for movies and shows
+    released between 1953–2022.
+  </p>
+
+  <!-- 🔴 REPLACE src WITH YOUR POWER BI EMBED LINK -->
+  <iframe
+    src="PASTE_YOUR_POWERBI_EMBED_LINK_HERE"
+    width="100%"
+    height="600"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</section>
+
+<!-- CONTACT -->
+<section class="container contact" id="contact" data-aos="fade-up">
+  <h2>Contact</h2>
+  <p>Email: yourname@gmail.com</p>
+  <p>GitHub: <a href="https://github.com/bhnama" target="_blank">github.com/bhnama</a></p>
+  <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourprofile</a></p>
+</section>
+
+<footer>
+  © 2026 Bhnama • Data Analyst
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+
+  new Typed("#typed", {
+    strings: [
+      "Data Analyst",
+      "Power BI Specialist",
+      "Excel, SQL & Python",
+      "Turning Data into Insights"
+    ],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
+
+  // Scroll progress
+  window.onscroll = () => {
+    document.getElementById("progress").style.width =
+      (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100 + "%";
+  };
+</script>
 
 </body>
 </html>
