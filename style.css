@@ -17,16 +17,15 @@ body{
   z-index:999;
 }
 
-/* Navbar */
 .navbar{
-  position:sticky;
-  top:0;
-  z-index:100;
-  backdrop-filter:blur(12px);
-  background:rgba(2,6,23,.6);
-  padding:18px 40px;
-  display:flex;
-  justify-content:space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #0b0f19;
+  padding: 20px 48px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .nav-links a{
@@ -88,15 +87,18 @@ body{
   gap:26px;
 }
 .card{
-  background:rgba(255,255,255,.04);
-  padding:26px;
-  border-radius:18px;
-  transition:.3s;
+  background: #111827;
+  padding: 28px;
+  border-radius: 16px;
+  transition: all .35s ease;
+  border: 1px solid rgba(255,255,255,0.06);
 }
+
 .card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 30px 70px rgba(0,0,0,.6);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.6);
 }
+
 .card-btn{
   display:inline-block;
   margin-top:14px;
@@ -104,11 +106,20 @@ body{
   text-decoration:none;
 }
 
-/* Dashboard */
-.dashboard-desc{
-  color:#cbd5f5;
-  margin-bottom:20px;
+.dashboard-3d{
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 30px 60px rgba(0,0,0,.7);
+  margin-top: 30px;
 }
+
+.dashboard-3d img{
+  width: 100%;
+  border-radius: 12px;
+}
+
 
 /* Contact */
 .contact p{margin-bottom:8px}
