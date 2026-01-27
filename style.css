@@ -14,7 +14,6 @@ header {
 }
 
 section {
- section {
   background: white;
   max-width: 900px;
   margin: 20px auto;
@@ -29,10 +28,10 @@ section:hover {
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-
+/* CLEAN h2 – NO LINE */
 h2 {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
+  margin-bottom: 12px;
+  font-size: 22px;
 }
 
 ul {
