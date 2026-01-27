@@ -10,6 +10,9 @@
 
   <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
@@ -26,9 +29,15 @@
 
   <!-- HERO -->
   <section class="hero" data-aos="fade-up">
-    <h1>Data Analyst</h1>
-    <p>Excel • SQL • Python • Power BI</p>
-    <span class="hero-sub">Turning raw data into business insights</span>
+    <h1>Hi, I’m <span class="accent">Bhnama</span></h1>
+    <h2>
+      <span id="typed"></span>
+    </h2>
+
+    <div class="hero-buttons">
+      <a href="resume.pdf" class="btn primary" download>Download Resume</a>
+      <a href="#projects" class="btn outline">View Projects</a>
+    </div>
   </section>
 
   <!-- SKILLS -->
@@ -54,33 +63,27 @@
     <div class="card-grid">
 
       <div class="card" data-aos="zoom-in">
-        <h3>Power BI Fundamentals</h3>
-        <p>Data loading, transformations, and visualization using Power BI Desktop.</p>
-      </div>
-
-      <div class="card" data-aos="zoom-in">
-        <h3>Data Cleaning with Power Query</h3>
-        <p>Shaping and cleaning raw datasets using Power Query Editor.</p>
-      </div>
-
-      <div class="card" data-aos="zoom-in">
-        <h3>DAX & Advanced DAX</h3>
-        <p>Measures, calculated columns, time intelligence, and advanced logic.</p>
-      </div>
-
-      <div class="card" data-aos="zoom-in">
         <h3>Netflix Dataset Visualization</h3>
-        <p>Analyzed genres, trends, and release patterns using dashboards.</p>
+        <p>Analyzed genres, trends, and release patterns using Power BI dashboards.</p>
+        <a class="card-btn" href="#">View Dashboard</a>
       </div>
 
       <div class="card" data-aos="zoom-in">
         <h3>E-Commerce Orders Analysis</h3>
-        <p>Sales, customers, revenue, and order insights in Power BI.</p>
+        <p>Sales, customers, revenue, and order insights using Power BI.</p>
+        <a class="card-btn" href="#">View Dashboard</a>
       </div>
 
       <div class="card" data-aos="zoom-in">
         <h3>Retail Analytics Case Study</h3>
         <p>KPIs, performance metrics, and trend analysis dashboards.</p>
+        <a class="card-btn" href="#">View Dashboard</a>
+      </div>
+
+      <div class="card" data-aos="zoom-in">
+        <h3>DAX & Advanced DAX</h3>
+        <p>Built advanced measures, time intelligence, and optimized calculations.</p>
+        <a class="card-btn" href="#">View Details</a>
       </div>
 
     </div>
@@ -105,6 +108,21 @@
       duration: 1000,
       once: true,
       easing: "ease-out-cubic"
+    });
+  </script>
+
+  <!-- Typed -->
+  <script>
+    new Typed("#typed", {
+      strings: [
+        "Data Analyst",
+        "Power BI Specialist",
+        "Excel & SQL Expert",
+        "Turning Data into Insights"
+      ],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true
     });
   </script>
 
