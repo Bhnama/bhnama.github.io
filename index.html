@@ -5,126 +5,128 @@
   <title>Bhnama | Data Analyst</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- AOS Animations -->
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Typed.js -->
+  <!-- Typed -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Bhnama</div>
-    <div class="nav-links">
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+<!-- SCROLL PROGRESS -->
+<div id="progress"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Bhnama</div>
+  <div class="nav-links">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" data-aos="fade-up">
+  <h1>Hi, I’m <span class="accent">Bhnama</span></h1>
+  <h2><span id="typed"></span></h2>
+
+  <div class="hero-buttons">
+    <a href="resume.pdf" class="btn primary" download>Download Resume</a>
+    <a href="#projects" class="btn outline">View Projects</a>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="container" id="skills" data-aos="fade-up">
+  <h2>Skills</h2>
+  <div class="chip-group">
+    <span>Excel</span><span>SQL</span><span>Python</span><span>Power BI</span>
+    <span>DAX</span><span>Power Query</span><span>Dashboards</span>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="container" id="projects" data-aos="fade-up">
+  <h2>Power BI Projects</h2>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <h3>Netflix Dashboard</h3>
+      <p>Content trends & genre analysis.</p>
+      <button onclick="openModal('Netflix Dashboard','Power BI dashboard analyzing Netflix content trends.')">
+        View Dashboard
+      </button>
     </div>
-  </nav>
 
-  <!-- HERO -->
-  <section class="hero" data-aos="fade-up">
-    <h1>Hi, I’m <span class="accent">Bhnama</span></h1>
-    <h2>
-      <span id="typed"></span>
-    </h2>
-
-    <div class="hero-buttons">
-      <a href="resume.pdf" class="btn primary" download>Download Resume</a>
-      <a href="#projects" class="btn outline">View Projects</a>
+    <div class="card">
+      <h3>E-Commerce Orders</h3>
+      <p>Sales & revenue insights.</p>
+      <button onclick="openModal('E-Commerce Orders','Orders, customers & revenue analysis in Power BI.')">
+        View Dashboard
+      </button>
     </div>
-  </section>
 
-  <!-- SKILLS -->
-  <section class="container" id="skills" data-aos="fade-up">
-    <h2>Skills</h2>
-    <div class="chip-group">
-      <span>Excel</span>
-      <span>SQL</span>
-      <span>Python</span>
-      <span>Power BI</span>
-      <span>DAX</span>
-      <span>Power Query</span>
-      <span>Data Cleaning</span>
-      <span>Dashboards</span>
-      <span>Data Visualization</span>
+    <div class="card">
+      <h3>Retail Analytics</h3>
+      <p>KPI & performance dashboards.</p>
+      <button onclick="openModal('Retail Analytics','Retail KPIs, performance metrics & trends.')">
+        View Dashboard
+      </button>
     </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section class="container" id="projects" data-aos="fade-up">
-    <h2>Power BI Experience & Projects</h2>
+  </div>
+</section>
 
-    <div class="card-grid">
+<!-- CONTACT -->
+<section class="container contact" id="contact" data-aos="fade-up">
+  <h2>Contact</h2>
+  <p>Email: yourname@gmail.com</p>
+  <p>GitHub: github.com/bhnama</p>
+  <p>LinkedIn: linkedin.com/in/yourprofile</p>
+</section>
 
-      <div class="card" data-aos="zoom-in">
-        <h3>Netflix Dataset Visualization</h3>
-        <p>Analyzed genres, trends, and release patterns using Power BI dashboards.</p>
-        <a class="card-btn" href="#">View Dashboard</a>
-      </div>
+<footer>© 2026 Bhnama • Data Analyst</footer>
 
-      <div class="card" data-aos="zoom-in">
-        <h3>E-Commerce Orders Analysis</h3>
-        <p>Sales, customers, revenue, and order insights using Power BI.</p>
-        <a class="card-btn" href="#">View Dashboard</a>
-      </div>
+<!-- MODAL -->
+<div id="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()">×</span>
+    <h3 id="modal-title"></h3>
+    <p id="modal-text"></p>
+  </div>
+</div>
 
-      <div class="card" data-aos="zoom-in">
-        <h3>Retail Analytics Case Study</h3>
-        <p>KPIs, performance metrics, and trend analysis dashboards.</p>
-        <a class="card-btn" href="#">View Dashboard</a>
-      </div>
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:900,once:true});
 
-      <div class="card" data-aos="zoom-in">
-        <h3>DAX & Advanced DAX</h3>
-        <p>Built advanced measures, time intelligence, and optimized calculations.</p>
-        <a class="card-btn" href="#">View Details</a>
-      </div>
+new Typed("#typed",{
+  strings:["Data Analyst","Power BI Specialist","Excel & SQL Expert"],
+  typeSpeed:60, backSpeed:40, loop:true
+});
 
-    </div>
-  </section>
+// Progress bar
+window.onscroll=()=>{
+  document.getElementById("progress").style.width =
+  (window.scrollY/(document.body.scrollHeight-window.innerHeight))*100+"%";
+};
 
-  <!-- CONTACT -->
-  <section class="container contact" id="contact" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p>Email: yourname@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/bhnama" target="_blank">github.com/bhnama</a></p>
-    <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourprofile</a></p>
-  </section>
-
-  <footer>
-    © 2026 Bhnama • Data Analyst
-  </footer>
-
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: "ease-out-cubic"
-    });
-  </script>
-
-  <!-- Typed -->
-  <script>
-    new Typed("#typed", {
-      strings: [
-        "Data Analyst",
-        "Power BI Specialist",
-        "Excel & SQL Expert",
-        "Turning Data into Insights"
-      ],
-      typeSpeed: 60,
-      backSpeed: 40,
-      loop: true
-    });
-  </script>
+// Modal
+function openModal(title,text){
+  document.getElementById("modal").style.display="flex";
+  document.getElementById("modal-title").innerText=title;
+  document.getElementById("modal-text").innerText=text;
+}
+function closeModal(){
+  document.getElementById("modal").style.display="none";
+}
+</script>
 
 </body>
 </html>
