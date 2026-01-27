@@ -1,46 +1,107 @@
-body {
-  font-family: Arial, sans-serif;
+/* RESET */
+* {
   margin: 0;
   padding: 0;
-  background: #f5f5f5;
-  color: #333;
+  box-sizing: border-box;
 }
 
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  perspective: 1200px;
+}
+
+/* HEADER */
 header {
-  background: #111;
+  background: linear-gradient(135deg, #111, #333);
   color: white;
-  padding: 40px;
+  padding: 50px 20px;
   text-align: center;
 }
 
+header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* 3D CARD SECTIONS */
 section {
   background: white;
   max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 14px;
+
+  transform-style: preserve-3d;
+
+  box-shadow:
+    0 15px 30px rgba(0,0,0,0.15),
+    0 5px 10px rgba(0,0,0,0.08);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
+/* REAL 3D HOVER */
 section:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transform:
+    translateY(-15px)
+    scale(1.04)
+    rotateX(3deg)
+    rotateY(-2deg);
+
+  box-shadow:
+    0 40px 70px rgba(0,0,0,0.3),
+    0 20px 30px rgba(0,0,0,0.2);
 }
 
-/* CLEAN h2 – NO LINE */
+/* HEADINGS */
 h2 {
-  margin-bottom: 12px;
-  font-size: 22px;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
+/* TEXT */
+p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* LIST */
 ul {
   padding-left: 20px;
 }
 
+li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* CONTACT LINKS */
+a {
+  color: #0a66c2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
 footer {
   background: #111;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 14px;
 }
