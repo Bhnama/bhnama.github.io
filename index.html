@@ -1,19 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bhnama | Data Analyst</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div id="progress"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Bhnama</div>
+  <div class="nav-links">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" data-aos="fade-up">
+  <h1>Hi, I’m <span class="accent">Bhnama</span></h1>
+  <h2><span id="typed"></span></h2>
+
+  <div class="hero-buttons">
+    <a href="#" class="btn primary">Download Resume</a>
+    <a href="#dashboard" class="btn outline">View Dashboard</a>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="container" id="skills" data-aos="fade-up">
+  <h2>Skills</h2>
+  <div class="chip-group">
+    <span>Excel</span>
+    <span>SQL</span>
+    <span>Python</span>
+    <span>Power BI</span>
+    <span>DAX</span>
+    <span>Power Query</span>
+    <span>Data Cleaning</span>
+    <span>Dashboards</span>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="container" id="projects" data-aos="fade-up">
+  <h2>Power BI Projects</h2>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Netflix / IMDb Analytics</h3>
+      <p>
+        Built an interactive Power BI dashboard using a public Netflix dataset.
+        Focused on trends, ratings, runtime, and engagement.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>E-Commerce Sales Analysis</h3>
+      <p>
+        KPI-driven dashboards analyzing revenue, customers, and sales trends.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Retail Performance Dashboard</h3>
+      <p>
+        Performance tracking dashboards with filters and business insights.
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- DASHBOARD -->
 <section class="container" id="dashboard" data-aos="fade-up">
   <h2>Netflix Movies & Shows Analytics Dashboard</h2>
 
   <p class="dashboard-desc">
-    Interactive Power BI dashboard built using a public Netflix dataset.
-    Focused on content trends, IMDb ratings, runtime, age certification
-    and audience engagement (1953–2022).
+    Real Power BI dashboard built using a public Netflix dataset.
+    Screenshot shown for portfolio demonstration.
   </p>
 
-  <!-- DASHBOARD CARD -->
   <div class="dashboard-3d">
-    <img src="dashboard.png" alt="Netflix Power BI Dashboard">
+    <img src="dashboard.png" alt="Power BI Dashboard">
   </div>
 
-  <p style="margin-top:14px;color:#9ca3af;font-size:14px">
-    *Dashboard created in Power BI • Screenshot shown for portfolio purposes
+  <p class="note">
+    *Dashboard created in Power BI Desktop (screenshot).
   </p>
 </section>
+
+<!-- CONTACT -->
+<section class="container contact" id="contact" data-aos="fade-up">
+  <h2>Contact</h2>
+  <p>Email: yourname@gmail.com</p>
+  <p>GitHub: <a href="https://github.com/Bhnama" target="_blank">github.com/Bhnama</a></p>
+</section>
+
+<footer>
+  © 2026 Bhnama • Data Analyst
+</footer>
+
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+
+  new Typed("#typed", {
+    strings: [
+      "Data Analyst",
+      "Power BI Specialist",
+      "Excel, SQL & Python",
+      "Turning Data into Insights"
+    ],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
+
+  // Scroll progress
+  window.onscroll = () => {
+    document.getElementById("progress").style.width =
+      (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100 + "%";
+  };
+</script>
+
+</body>
+</html>
