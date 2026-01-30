@@ -1,156 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Bh_nama | Data Analyst</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- Typed.js -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-</head>
-
-<body>
-
-<!-- SCROLL PROGRESS -->
-<div id="progress"></div>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">Bh_nama</div>
-  <div class="nav-links">
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#dashboard">Dashboard</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero" data-aos="fade-up">
-  <h1>Hi, I’m <span class="accent">Bh_nama</span></h1>
-  <h2><span id="typed"></span></h2>
-
-  <div class="hero-buttons">
-    <a href="resume.pdf" class="btn primary" download>Download Resume</a>
-    <a href="#dashboard" class="btn outline">View Dashboard</a>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="container" id="skills" data-aos="fade-up">
-  <h2>Skills</h2>
-  <div class="chip-group">
-    <span>Excel</span>
-    <span>SQL</span>
-    <span>Python</span>
-    <span>Power BI</span>
-    <span>DAX</span>
-    <span>Power Query</span>
-    <span>Data Cleaning</span>
-    <span>Dashboards</span>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="container" id="projects" data-aos="fade-up">
-  <h2>Power BI Projects</h2>
-
-  <div class="card-grid">
-
-    <div class="card">
-      <h3>Netflix / IMDb Analytics</h3>
-      <p>
-        Analyzed 70 years of movies & shows data using Power BI.
-        Built interactive dashboards using Power Query, DAX, slicers,
-        and advanced visualizations.
-      </p>
-      <a href="#dashboard" class="card-btn">View Dashboard</a>
-    </div>
-
-    <div class="card">
-      <h3>E-Commerce Orders Analysis</h3>
-      <p>
-        Sales, revenue, customer insights using Power BI dashboards
-        with KPIs and filters.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Retail Analytics Case Study</h3>
-      <p>
-        KPI tracking, trend analysis, and performance monitoring dashboards.
-      </p>
-    </div>
-
-  </div>
-</section>
-
 <!-- DASHBOARD -->
 <section class="container" id="dashboard" data-aos="fade-up">
   <h2>Netflix Movies & Shows Analytics Dashboard</h2>
 
   <p class="dashboard-desc">
-    This Power BI dashboard analyzes IMDb ratings, votes, runtime,
-    age certification, and release trends for movies and shows
-    released between 1953–2022.
+    Interactive Power BI dashboard built using a public Netflix dataset.
+    Focused on content trends, IMDb ratings, runtime, age certification
+    and audience engagement (1953–2022).
   </p>
 
-  <!-- 🔴 REPLACE src WITH YOUR POWER BI EMBED LINK -->
-<img 
-  src="dashboard.png"
-  alt="Netflix Power BI Dashboard"
-  style="
-    width:100%;
-    max-width:1200px;
-    margin-top:20px;
-    border-radius:12px;
-    box-shadow:0 20px 50px rgba(0,0,0,0.5);
-  "
->
+  <!-- DASHBOARD CARD -->
+  <div class="dashboard-3d">
+    <img src="dashboard.png" alt="Netflix Power BI Dashboard">
+  </div>
 
+  <p style="margin-top:14px;color:#9ca3af;font-size:14px">
+    *Dashboard created in Power BI • Screenshot shown for portfolio purposes
+  </p>
 </section>
-
-<!-- CONTACT -->
-<section class="container contact" id="contact" data-aos="fade-up">
-  <h2>Contact</h2>
-  <p>Email: bhaweshnama@gmail.com</p>
-  <p>GitHub: <a href="https://github.com/bhnama" target="_blank">github.com/bhnama</a></p>
-  <p>LinkedIn: <a href="#" target="_blank">https://www.linkedin.com/in/bhawesh-nama-54a0772b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app</a></p>
-</section>
-
-<footer>
-  © 2026 Bh_nama • Data Analyst
-</footer>
-
-<!-- SCRIPTS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 1000, once: true });
-
-  new Typed("#typed", {
-    strings: [
-      "Data Analyst",
-      "Power BI Specialist",
-      "Excel, SQL & Python",
-      "Turning Data into Insights"
-    ],
-    typeSpeed: 60,
-    backSpeed: 40,
-    loop: true
-  });
-
-  // Scroll progress
-  window.onscroll = () => {
-    document.getElementById("progress").style.width =
-      (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100 + "%";
-  };
-</script>
-
-</body>
-</html>
